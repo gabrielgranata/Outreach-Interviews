@@ -15,66 +15,66 @@ import com.outreach.interviews.map.enums.MapRegions;
 public class TestMapRoutesHelper 
 {	
 	
-	@Test
-	public void testMapRoutesHelperApiKey1() throws UnsupportedOperationException, IOException {
-		new MapRoutesHelper.RoutesBuilder()
-			.setOrigin("Sudbury")
-			.setDestination("Ottawa")
-			.setRegion(MapRegions.en)
-			.setURL(MapOperations.directions)
-			.build();
-	}
+	// @Test
+	// public void testMapRoutesHelperApiKey1() throws UnsupportedOperationException, IOException {
+	// 	new MapRoutesHelper.RoutesBuilder()
+	// 		.setOrigin("Sudbury")
+	// 		.setDestination("Ottawa")
+	// 		.setRegion(MapRegions.en)
+	// 		.setURL(MapOperations.directions)
+	// 		.build();
+	// }
 	
-	@Test
-	public void testMapRoutesHelperApiKey2() throws UnsupportedOperationException, IOException {
-		List<String> steps = new MapRoutesHelper.RoutesBuilder()
-			.setOrigin("Sudbury")
-			.setDestination("Ottawa")
-			.setRegion(MapRegions.en)
-			.setURL(MapOperations.directions)
-			.build()
-			.getDirections();
+	// @Test
+	// public void testMapRoutesHelperApiKey2() throws UnsupportedOperationException, IOException {
+	// 	List<String> steps = new MapRoutesHelper.RoutesBuilder()
+	// 		.setOrigin("Sudbury")
+	// 		.setDestination("Ottawa")
+	// 		.setRegion(MapRegions.en)
+	// 		.setURL(MapOperations.directions)
+	// 		.build()
+	// 		.getDirections();
 		
-		assertNotNull(steps);
-		assertTrue(steps.size() > 5);
-	}
+	// 	assertNotNull(steps);
+	// 	assertTrue(steps.size() > 5);
+	// }
 	
-	@Test(expected = java.lang.UnsupportedOperationException.class)
-	public void testMapRoutesHelperApiKey3() throws UnsupportedOperationException, IOException {
-		List<String> steps = new MapRoutesHelper.RoutesBuilder()
-			.setOrigin("Sudbury")
-			.setDestination("Ottawa")
-			.setRegion(MapRegions.en)
-			.setURL(MapOperations.geocode)
-			.build()
-			.getDirections();
+	// @Test(expected = java.lang.UnsupportedOperationException.class)
+	// public void testMapRoutesHelperApiKey3() throws UnsupportedOperationException, IOException {
+	// 	List<String> steps = new MapRoutesHelper.RoutesBuilder()
+	// 		.setOrigin("Sudbury")
+	// 		.setDestination("Ottawa")
+	// 		.setRegion(MapRegions.en)
+	// 		.setURL(MapOperations.geocode)
+	// 		.build()
+	// 		.getDirections();
 		
-		assertNotNull(steps);
-	}
+	// 	assertNotNull(steps);
+	// }
 	
-	@Test(expected = java.lang.IllegalArgumentException.class)
-	public void testMapRoutesHelperApiKey4() throws UnsupportedOperationException, IOException {
-		List<String> steps = new MapRoutesHelper.RoutesBuilder()
-			.setDestination("Ottawa")
-			.setRegion(MapRegions.en)
-			.setURL(MapOperations.directions)
-			.build()
-			.getDirections();
+	// @Test(expected = java.lang.IllegalArgumentException.class)
+	// public void testMapRoutesHelperApiKey4() throws UnsupportedOperationException, IOException {
+	// 	List<String> steps = new MapRoutesHelper.RoutesBuilder()
+	// 		.setDestination("Ottawa")
+	// 		.setRegion(MapRegions.en)
+	// 		.setURL(MapOperations.directions)
+	// 		.build()
+	// 		.getDirections();
 		
-		assertNotNull(steps);
-	}
+	// 	assertNotNull(steps);
+	// }
 	
-	@Test
-	public void testMapRoutesHelperApiKey5() throws UnsupportedOperationException, IOException {
-		List<String> steps = new MapRoutesHelper.RoutesBuilder()
-			.setOrigin("Sudbury")
-			.setDestination("Ottawa")
-			.setRegion(MapRegions.en)
-			.setURL(MapOperations.directions)
-			.build()
-			.getDirections();
+	// @Test
+	// public void testMapRoutesHelperApiKey5() throws UnsupportedOperationException, IOException {
+	// 	List<String> steps = new MapRoutesHelper.RoutesBuilder()
+	// 		.setOrigin("Sudbury")
+	// 		.setDestination("Ottawa")
+	// 		.setRegion(MapRegions.en)
+	// 		.setURL(MapOperations.directions)
+	// 		.build()
+	// 		.getDirections();
 		
-		assertNotNull(steps);
-	}
+	// 	assertNotNull(steps);
+	// }
 	
 }
